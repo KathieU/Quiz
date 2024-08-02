@@ -1,4 +1,4 @@
-body {
+/* body {
   font-family: Arial, sans-serif;
   display: flex;
   justify-content: center;
@@ -9,7 +9,7 @@ body {
 
 .quiz-container {
   display: flex;
-  width: 1000px; /* Adjust based on your preference */
+  width: 1000px; 
 }
 
 .quiz-content {
@@ -92,4 +92,4 @@ body {
   to {
     transform: translateY(0);
   }
-}
+} */

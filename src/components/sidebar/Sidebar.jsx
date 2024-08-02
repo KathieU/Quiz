@@ -6,6 +6,19 @@ const Sidebar = ({ questions, currentQuestionIndex }) => {
     <div className="sidebar">
       <h3>Questions</h3>
       <ul>
+        <li
+          key={-1}
+          className={`sidebar-item ${
+            currentQuestionIndex === -1 ? "active" : ""
+          }`}
+        >
+          <div
+            className={`sidebar-indicator ${
+              currentQuestionIndex === -1 ? "active" : ""
+            }`}
+          ></div>
+          Intro
+        </li>
         {questions.map((_, index) => (
           <li
             key={index}
@@ -21,6 +34,19 @@ const Sidebar = ({ questions, currentQuestionIndex }) => {
             {index + 1}
           </li>
         ))}
+        <li
+          key={questions.length}
+          className={`sidebar-item ${
+            currentQuestionIndex === questions.length ? "active" : ""
+          }`}
+        >
+          <div
+            className={`sidebar-indicator ${
+              currentQuestionIndex === questions.length ? "active" : ""
+            }`}
+          ></div>
+          End
+        </li>
       </ul>
     </div>
   );
