@@ -1,0 +1,83 @@
+/* QuestionPage.css */
+.question-page {
+  position: relative;
+  padding: 20px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden; /* Prevent scrolling */
+}
+
+.question-page-header {
+  text-align: center;
+}
+
+.question-content {
+  text-align: center;
+}
+
+.options-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.option {
+  padding: 10px 20px;
+  margin: 10px 0;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.option:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-color: #007bff; /* Border color on hover */
+}
+
+.option.selected {
+  background-color: #007bff; /* Background color for selected option */
+  color: #fff; /* Text color for selected option */
+}
+
+.circle {
+  width: 15px;
+  height: 15px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #007bff;
+  display: inline-block;
+}
+
+.selected-circle {
+  background-color: #007bff;
+}
+
+.show-answer-button:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+
+.show-answer-button {
+  cursor: pointer;
+}
+
+.show-answer-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.show-answer-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}

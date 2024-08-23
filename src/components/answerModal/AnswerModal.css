@@ -1,0 +1,60 @@
+/* AnswerModal.css */
+.answer-modal {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: slideUp 1s ease-in-out forwards;
+}
+
+.answer-modal-content {
+  width: 80%;
+  text-align: center;
+  color: white;
+}
+
+.background-split {
+  display: flex;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.background-plain {
+  flex: 1;
+  background-color: #333;
+}
+
+.background-image {
+  flex: 1;
+  background-image: url("/path/to/answer-background.jpg");
+  background-size: cover;
+}
+
+.answer-text {
+  font-size: 1.5rem;
+}
+
+.next-question-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,144 +1,59 @@
+/* App.css */
+html,
 body {
-  font-family: Arial, sans-serif;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  background-color: #f0f0f0;
-  overflow: hidden; /* Prevent scrolling */
-}
-
-.quiz-container {
-  display: flex;
-  width: 1000px;
-  height: 100vh; /* Fixed height */
-  overflow: hidden; /* Prevent scrolling */
-  position: relative;
-}
-
-.quiz-content {
-  flex: 1;
-  padding: 20px;
-  background-color: #fff;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
-  height: 100%;
-  overflow: hidden; /* Prevent scrolling */
-}
-
-.intro,
-.quiz-end {
-  text-align: center;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.quiz-slide.active {
-  display: block;
-  background-size: cover;
-  background-position: center;
-  height: 100%;
-  animation: slideUp 0.5s forwards;
-}
-
-.question h2 {
   margin: 0;
-}
-
-.answers {
-  margin-top: 20px;
-}
-
-.correct-answer {
-  margin-top: 10px;
-  color: green;
-  display: block;
-}
-
-.show-answer {
-  margin-top: 10px;
-}
-
-.next-question {
-  margin-top: 20px;
-}
-
-.quiz-end {
-  text-align: center;
-}
-
-.answer {
-  display: block;
-  margin: 5px 0;
-  padding: 10px;
-  background-color: #f0f0f0;
-  border: none;
-  cursor: pointer;
-}
-
-.answer.selected {
-  background-color: #d0d0f0;
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling on the body */
   height: 100%;
+}
+
+.app-container {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.5);
-  animation: fadeIn 0.5s;
+  position: relative;
+  height: 100vh;
+  overflow: hidden; /* Prevent scrolling on the app container */
 }
 
-.modal-content {
-  background-color: white;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  animation: slideUpModal 0.5s forwards;
+.content {
+  width: calc(100% - 200px); /* Adjust width to account for sidebar */
+  height: 100%;
+  overflow: hidden; /* Prevent scrolling within content area */
+  transition: transform 0.5s ease-in-out;
 }
 
-.share-links {
-  margin-top: 20px;
+/* App.css */
+.front-page {
+  transform: translateY(0);
 }
 
-.share-links a {
-  display: block;
-  margin: 5px 0;
-  color: blue;
-  text-decoration: none;
+.question-page-enter {
+  transform: translateY(100%);
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
+.question-page-enter-active {
+  transform: translateY(0);
 }
 
-@keyframes slideUp {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(0);
-  }
+.question-page-exit {
+  transform: translateY(0);
 }
 
-@keyframes slideUpModal {
-  from {
-    transform: translateY(100%);
-  }
-  to {
-    transform: translateY(50%);
-  }
+.question-page-exit-active {
+  transform: translateY(-100%);
+}
+
+.result-page-enter {
+  transform: translateY(100%);
+}
+
+.result-page-enter-active {
+  transform: translateY(0);
+}
+
+.result-page-exit {
+  transform: translateY(0);
+}
+
+.result-page-exit-active {
+  transform: translateY(-100%);
 }

@@ -1,0 +1,29 @@
+/* FrontPage.css */
+.front-page {
+  display: flex;
+  height: 100vh;
+  background-image: url("/path/to/background.jpg");
+  background-size: cover;
+  position: relative;
+}
+
+.front-page-header {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  color: white;
+}
+
+.front-page-content {
+  margin: auto;
+}
+
+.start-quiz-button {
+  padding: 10px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 1.5rem;
+  text-decoration: none;
+  border-radius: 5px;
+}
