@@ -31,34 +31,3 @@ const questions = [
 ];
 
 export default questions;
-
-// questions.js
-// const questions = [
-//   {
-//     text: "What is the capital of France?",
-//     answers: [
-//       { text: "Paris" },
-//       { text: "London" },
-//       { text: "Berlin" },
-//       { text: "Madrid" },
-//     ],
-//     correctAnswer: "Paris",
-//   },
-//   {
-//     text: "What is 2 + 2?",
-//     answers: [{ text: "3" }, { text: "4" }, { text: "5" }, { text: "6" }],
-//     correctAnswer: "4",
-//   },
-//   {
-//     text: "What is the color of the sky?",
-//     answers: [
-//       { text: "Blue" },
-//       { text: "Green" },
-//       { text: "Red" },
-//       { text: "Yellow" },
-//     ],
-//     correctAnswer: "Blue",
-//   },
-// ];
-
-// export default questions;

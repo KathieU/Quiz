@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import PropTypes from "prop-types";
 import "./QuestionPage.css";
 
@@ -9,6 +10,12 @@ const QuestionPage = ({
   onShowAnswer,
 }) => {
   const { question, options, bgImage } = questionData;
+  const [animationKey, setAnimationKey] = useState(Date.now());
+
+  useEffect(() => {
+    // Trigger re-render by changing the key when questionData changes
+    setAnimationKey(Date.now());
+  }, [questionData]);
 
   const handleOptionClick = (option) => {
     onAnswerSelect(option);
@@ -16,6 +23,7 @@ const QuestionPage = ({
 
   return (
     <div
+      key={animationKey} // Force re-render when question changes
       className="question-page slide-up"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
@@ -46,7 +54,7 @@ const QuestionPage = ({
       <button
         className="show-answer-button"
         onClick={onShowAnswer}
-        disabled={!selectedAnswer} // Ensure button is enabled only when an answer is selected
+        disabled={!selectedAnswer}
       >
         Show Answer
       </button>

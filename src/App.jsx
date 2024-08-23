@@ -16,20 +16,6 @@ function App() {
   const navigate = useNavigate();
   const location = useLocation();
 
-  // const handleNextQuestion = () => {
-  //   const isCorrect =
-  //     selectedAnswer === questions[currentQuestionIndex].correct;
-  //   if (isCorrect) setScore(score + 1);
-
-  //   if (currentQuestionIndex < questions.length - 1) {
-  //     setCurrentQuestionIndex(currentQuestionIndex + 1);
-  //     setSelectedAnswer(null);
-  //     setShowModal(false);
-  //   } else {
-  //     navigate("/result");
-  //   }
-  // };
-
   const handleNextQuestion = () => {
     const isCorrect =
       selectedAnswer === questions[currentQuestionIndex].correct;
@@ -38,9 +24,9 @@ function App() {
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
-      setShowModal(false); // Close the modal
+      setShowModal(false);
     } else {
-      setShowModal(false); // Ensure modal is closed
+      setShowModal(false);
       navigate("/result");
     }
   };
