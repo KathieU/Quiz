@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import "./FrontPage.css";
 import Header from "../header/Header";
-import Sidebar from "../sidebar/Sidebar"; // Import Sidebar
+import Sidebar from "../sidebar/Sidebar";
 
 function FrontPage() {
   const navigate = useNavigate();
@@ -12,10 +12,7 @@ function FrontPage() {
 
   return (
     <div className="front-page">
-      <Sidebar
-        currentPage="front" // Set the current page to 'front'
-        questions={[]} // Pass an empty array if Sidebar is not using questions
-      />
+      <Sidebar currentPage="front" questions={[]} />
       <Header />
       <div className="front-page-content">
         <div className="background-image"></div>

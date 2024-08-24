@@ -1,48 +1,40 @@
-.result-page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  animation: slideUp 1s ease-in-out forwards;
+.result-page-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.result-page-header {
-  margin-bottom: 20px;
+.previous-question-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  z-index: 1;
+}
+
+.result-page {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  animation: slideUp 1s ease-in-out forwards;
+  z-index: 2;
+  background-color: white;
 }
 
 .result-content {
   text-align: center;
-}
-
-.result-buttons {
-  margin-top: 20px;
-}
-
-.result-buttons button {
-  padding: 10px 20px;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-right: 10px;
-}
-
-.result-buttons button:hover {
-  background-color: #0056b3;
-}
-
-.result-buttons a {
-  padding: 10px 20px;
-  background-color: #1da1f2;
-  color: white;
-  border-radius: 5px;
-  text-decoration: none;
-}
-
-.result-buttons a:hover {
-  background-color: #0d95e8;
 }
 
 @keyframes slideUp {
