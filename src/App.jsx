@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import questions from "./question";
-import Sidebar from "./components/sidebar/Sidebar";
 import FrontPage from "./components/frontPage/FrontPage";
 import QuestionPage from "./components/questionPage/QuestionPage";
 import ResultPage from "./components/resultPage/ResultPage";
@@ -56,20 +55,8 @@ function App() {
     navigate("/");
   };
 
-  const getCurrentPage = () => {
-    if (location.pathname === "/") return "front";
-    if (location.pathname.startsWith("/quiz"))
-      return `question-${currentQuestionIndex}`;
-    if (location.pathname === "/result") return "result";
-    return "";
-  };
-
   return (
     <div className="app-container">
-      <Sidebar
-        currentPage={getCurrentPage()}
-        questions={questionData} // Pass the questions to Sidebar
-      />
       <div className={`content ${location.pathname}`}>
         <Routes>
           <Route
