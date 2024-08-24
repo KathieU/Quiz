@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import "./App.css";
 import questions from "./question";
@@ -7,21 +7,29 @@ import FrontPage from "./components/frontPage/FrontPage";
 import QuestionPage from "./components/questionPage/QuestionPage";
 import ResultPage from "./components/resultPage/ResultPage";
 import AnswerModal from "./components/answerModal/AnswerModal";
+import { getRandomQuestions } from "./utils"; // Import the utility function
 
 function App() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [selectedAnswer, setSelectedAnswer] = useState(null);
   const [showModal, setShowModal] = useState(false);
+  const [questionData, setQuestionData] = useState([]); // Array to store random questions
   const navigate = useNavigate();
   const location = useLocation();
 
+  useEffect(() => {
+    // Load 5 random questions when the component mounts
+    const randomQuestions = getRandomQuestions(questions, 5);
+    setQuestionData(randomQuestions);
+  }, []);
+
   const handleNextQuestion = () => {
     const isCorrect =
-      selectedAnswer === questions[currentQuestionIndex].correct;
+      selectedAnswer === questionData[currentQuestionIndex]?.correct;
     if (isCorrect) setScore(score + 1);
 
-    if (currentQuestionIndex < questions.length - 1) {
+    if (currentQuestionIndex < questionData.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
       setSelectedAnswer(null);
       setShowModal(false);
@@ -37,6 +45,7 @@ function App() {
 
   const handleShowAnswer = () => {
     setShowModal(true);
+    console.log("Show answer button clicked");
   };
 
   const handleResetQuiz = () => {
@@ -57,7 +66,10 @@ function App() {
 
   return (
     <div className="app-container">
-      <Sidebar currentPage={getCurrentPage()} />
+      <Sidebar
+        currentPage={getCurrentPage()}
+        questions={questionData} // Pass the questions to Sidebar
+      />
       <div className={`content ${location.pathname}`}>
         <Routes>
           <Route
@@ -68,13 +80,15 @@ function App() {
             path="/quiz"
             element={
               <QuestionPage
-                questionData={questions[currentQuestionIndex]}
+                questionData={questionData[currentQuestionIndex]}
                 questionNumber={currentQuestionIndex + 1}
                 onNext={handleNextQuestion}
                 onAnswerSelect={handleAnswerSelect}
                 selectedAnswer={selectedAnswer}
                 onShowAnswer={handleShowAnswer}
-                isLastQuestion={currentQuestionIndex === questions.length - 1}
+                isLastQuestion={
+                  currentQuestionIndex === questionData.length - 1
+                }
               />
             }
           />
@@ -83,7 +97,7 @@ function App() {
             element={
               <ResultPage
                 score={score}
-                totalQuestions={questions.length}
+                totalQuestions={questionData.length} // Updated to reflect 5 questions
                 onTryAgain={handleResetQuiz}
               />
             }
@@ -93,9 +107,9 @@ function App() {
 
       {showModal && location.pathname.startsWith("/quiz") && (
         <AnswerModal
-          correctAnswer={questions[currentQuestionIndex].correct}
+          correctAnswer={questionData[currentQuestionIndex]?.correct}
           onNext={handleNextQuestion}
-          isLastQuestion={currentQuestionIndex === questions.length - 1}
+          isLastQuestion={currentQuestionIndex === questionData.length - 1}
         />
       )}
     </div>

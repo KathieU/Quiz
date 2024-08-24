@@ -13,7 +13,6 @@ const QuestionPage = ({
   const [animationKey, setAnimationKey] = useState(Date.now());
 
   useEffect(() => {
-    // Trigger re-render by changing the key when questionData changes
     setAnimationKey(Date.now());
   }, [questionData]);
 
@@ -23,7 +22,7 @@ const QuestionPage = ({
 
   return (
     <div
-      key={animationKey} // Force re-render when question changes
+      key={animationKey}
       className="question-page slide-up"
       style={{ backgroundImage: `url(${bgImage})` }}
     >
