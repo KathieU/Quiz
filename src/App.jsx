@@ -64,23 +64,26 @@ function App() {
           <Route
             path="/quiz"
             element={
-              <QuestionPage
-                questionData={questionData[currentQuestionIndex]}
-                previousQuestionData={
-                  currentQuestionIndex > 0
-                    ? questionData[currentQuestionIndex - 1]
-                    : null
-                }
-                questionNumber={currentQuestionIndex + 1}
-                onAnswerSelect={handleAnswerSelect}
-                selectedAnswer={selectedAnswer}
-                onShowAnswer={handleShowAnswer}
-                isLastQuestion={
-                  currentQuestionIndex === questionData.length - 1
-                }
-              />
+              <>
+                {currentQuestionIndex === 0 && (
+                  <FrontPage onStartQuiz={() => navigate("/quiz")} />
+                )}
+                <QuestionPage
+                  questionData={questionData[currentQuestionIndex]}
+                  previousQuestionData={
+                    currentQuestionIndex > 0
+                      ? questionData[currentQuestionIndex - 1]
+                      : null
+                  }
+                  questionNumber={currentQuestionIndex + 1}
+                  onAnswerSelect={handleAnswerSelect}
+                  selectedAnswer={selectedAnswer}
+                  onShowAnswer={handleShowAnswer}
+                />
+              </>
             }
           />
+
           <Route
             path="/result"
             element={

@@ -24,7 +24,14 @@ const QuestionPage = ({
 
   return (
     <div className="question-page-container">
-      {previousQuestionData && (
+      {/* Render the front page as the previous page when it's the first question */}
+      {questionNumber === 1 && (
+        <div className="question-page previous front-page-background">
+          {/* This acts as a background, replicating the front page appearance */}
+        </div>
+      )}
+
+      {previousQuestionData && questionNumber > 1 && (
         <div
           className="question-page previous"
           style={{ backgroundImage: `url(${previousQuestionData.bgImage})` }}
@@ -47,6 +54,7 @@ const QuestionPage = ({
           </div>
         </div>
       )}
+
       <div
         key={animationKey}
         className="question-page active"
