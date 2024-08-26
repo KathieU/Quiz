@@ -1,21 +1,20 @@
 .front-page {
   display: flex;
   height: 100vh;
-  background-image: url("/path/to/background.jpg");
-  background-size: cover;
+  background-image: url("../../assets/landing.png");
+  background-size: contain;
   position: relative;
 }
 
-.front-page-header {
-  position: absolute;
-  top: 20px;
-  left: 20px;
-  font-size: 2rem;
-  color: white;
-}
-
 .front-page-content {
+  width: 70%;
   margin: auto;
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* gap: 8px; */
 }
 
 .start-quiz-button {
@@ -25,4 +24,20 @@
   font-size: 1.5rem;
   text-decoration: none;
   border-radius: 5px;
+  align-self: center;
+}
+
+.front-page h2 {
+  color: #f2feff;
+  font-family: "Aileron";
+  font-size: 4rem;
+  text-align: center;
+  font-weight: 900;
+}
+
+.front-page p {
+  color: #f2feff;
+  text-align: center;
+  font-family: "Arimo";
+  font-size: 14px;
 }

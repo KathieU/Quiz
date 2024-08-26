@@ -15,7 +15,8 @@ function FrontPage() {
       <Sidebar currentPage="front" questions={[]} />
       <Header />
       <div className="front-page-content">
-        <div className="background-image"></div>
+        <h2>How Well Do You Know The Nigerian Workspace?</h2>
+        <p>Let’s test your knowledge!</p>
         <button className="start-quiz-button" onClick={handleStartQuiz}>
           Start Quiz
         </button>

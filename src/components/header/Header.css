@@ -1,15 +1,52 @@
 .header {
   width: 100%;
-  padding: 20px;
-  background-color: #ff5722;
-  color: #fff;
+  background-color: #fff7f1;
+  color: #a74702;
   text-align: center;
   position: fixed;
   top: 0;
   left: 0;
-  /* z-index: 1; */
+  font-family: "Aileron", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  padding-bottom: 0.9375rem;
+}
+
+.header-buttons-container {
+  margin-right: 2.88rem;
+  display: flex;
+  gap: 8px;
 }
 
 .header h1 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 400;
+  margin-left: 2.88rem;
+}
+
+.header h1 span {
+  font-weight: 900;
+}
+
+.header button {
+  border-radius: 29px;
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  width: 8.4375rem;
+  height: 2.5rem;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.header .more-info-button button {
+  background: #ffd4b4;
+  color: #a74702;
+}
+
+.header .download-report-button button {
+  background: #f79646;
+  color: #f2feff;
 }
