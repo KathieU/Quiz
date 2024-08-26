@@ -2,17 +2,13 @@ import { useNavigate } from "react-router-dom";
 import "./FrontPage.css";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
-import { useState } from "react";
 
 function FrontPage() {
   const navigate = useNavigate();
 
   const handleStartQuiz = () => {
-    setAnimate(true);
-    setTimeout(() => setAnimate(false), 300);
     navigate("/quiz");
   };
-  const [animate, setAnimate] = useState(false);
 
   return (
     <div className="front-page">
@@ -23,7 +19,7 @@ function FrontPage() {
         <div className="front-page-content">
           <h2>How Well Do You Know The Nigerian Workspace?</h2>
           <p>Let’s test your knowledge!</p>
-          <div className={`front-button-container ${animate ? "move-up" : ""}`}>
+          <div className="front-button-container">
             <button className="start-quiz-button" onClick={handleStartQuiz}>
               START YOUR QUEST
               <svg

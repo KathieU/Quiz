@@ -76,19 +76,4 @@
   padding-left: 4px;
   padding-right: 4px;
   cursor: pointer;
-
-  transition: transform 0.3s ease-in;
-}
-
-.move-up {
-  animation: moveUp 300ms ease-in forwards;
-}
-
-@keyframes moveUp {
-  from {
-    transform: translateY(0);
-  }
-  to {
-    transform: translateY(-30px);
-  }
 }
