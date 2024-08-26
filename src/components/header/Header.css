@@ -4,6 +4,7 @@
   color: #a74702;
   text-align: center;
   position: fixed;
+
   top: 0;
   left: 0;
   font-family: "Aileron", sans-serif;
@@ -12,6 +13,7 @@
   justify-content: space-between;
   padding-top: 1rem;
   padding-bottom: 0.9375rem;
+  border-radius: 0.625rem 0.625rem 0rem 0rem;
 }
 
 .header-buttons-container {
