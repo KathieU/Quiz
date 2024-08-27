@@ -19,8 +19,8 @@ function FrontPage() {
         <div className="front-page-content">
           <h2>How Well Do You Know The Nigerian Workspace?</h2>
           <p>Let’s test your knowledge!</p>
-          <div className="front-button-container">
-            <button className="start-quiz-button" onClick={handleStartQuiz}>
+          <div className="general-button-container">
+            <button className="general-button" onClick={handleStartQuiz}>
               START YOUR QUEST
               <svg
                 xmlns="http://www.w3.org/2000/svg"
