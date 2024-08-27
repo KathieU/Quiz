@@ -22,13 +22,29 @@ const QuestionPage = ({
     onAnswerSelect(option);
   };
 
+  // Function to highlight specified words in the question text
+  const highlightText = (text, highlights) => {
+    if (!highlights) return text;
+
+    const highlightArray = Array.isArray(highlights)
+      ? highlights
+      : [highlights];
+    const parts = text.split(new RegExp(`(${highlightArray.join("|")})`, "gi"));
+    return parts.map((part, index) =>
+      highlightArray.includes(part) ? (
+        <span key={index} style={{ color: "red" }}>
+          {part}
+        </span>
+      ) : (
+        part
+      )
+    );
+  };
+
   return (
     <div className="question-page-container">
-      {/* Render the front page as the previous page when it's the first question */}
       {questionNumber === 1 && (
-        <div className="question-page previous front-page-background">
-          {/* This acts as a background, replicating the front page appearance */}
-        </div>
+        <div className="question-page previous front-page-background"></div>
       )}
 
       {previousQuestionData && questionNumber > 1 && (
@@ -42,7 +58,12 @@ const QuestionPage = ({
           />
           <Header />
           <div className="question-content">
-            <h3>{previousQuestionData.question}</h3>
+            <h3>
+              {highlightText(
+                previousQuestionData.question,
+                previousQuestionData.highlights
+              )}
+            </h3>
             <ul className="options-list">
               {previousQuestionData.options.map((option, index) => (
                 <li key={index} className="option">
@@ -66,7 +87,9 @@ const QuestionPage = ({
         />
         <Header />
         <div className="question-content">
-          <h3>{questionData.question}</h3>
+          <h3>
+            {highlightText(questionData.question, questionData.highlights)}
+          </h3>
           <ul className="options-list">
             {questionData.options.map((option, index) => (
               <li
@@ -103,12 +126,14 @@ QuestionPage.propTypes = {
     question: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     bgImage: PropTypes.string.isRequired,
+    highlights: PropTypes.arrayOf(PropTypes.string), // Optional array of words to highlight
   }).isRequired,
   previousQuestionData: PropTypes.shape({
     question: PropTypes.string.isRequired,
     options: PropTypes.arrayOf(PropTypes.string).isRequired,
     bgImage: PropTypes.string.isRequired,
-  }), // Previous question is optional
+    highlights: PropTypes.arrayOf(PropTypes.string), // Optional array of words to highlight
+  }),
   questionNumber: PropTypes.number.isRequired,
   onAnswerSelect: PropTypes.func.isRequired,
   selectedAnswer: PropTypes.string,

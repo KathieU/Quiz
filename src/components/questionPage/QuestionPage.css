@@ -37,6 +37,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
   z-index: 2;
@@ -57,4 +58,23 @@
   to {
     transform: translateY(0);
   }
+}
+
+.question-content h3 {
+  color: #f2feff;
+  text-align: center;
+  font-family: "Arimo";
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+.question-content ul {
+  border: 2px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.highlight {
+  color: red;
 }
