@@ -103,6 +103,8 @@ function App() {
           correctAnswer={questionData[currentQuestionIndex]?.correct}
           onNext={handleNextQuestion}
           isLastQuestion={currentQuestionIndex === questionData.length - 1}
+          bgImage={questionData[currentQuestionIndex]?.bgImage}
+          answerText={questionData[currentQuestionIndex]?.answerText}
         />
       )}
     </div>

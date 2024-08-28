@@ -85,7 +85,7 @@
   width: 14.75rem;
   height: 11.25rem;
   border-radius: 10px;
-  margin-bottom: 2.5rem;
+  margin-bottom: 3rem;
   margin-top: 2.69rem;
   background: rgba(255, 247, 241, 0.95);
 }
@@ -137,4 +137,8 @@
   display: flex;
   align-self: right;
   margin-left: auto;
+}
+
+button:disabled {
+  cursor: not-allowed;
 }

@@ -1,4 +1,4 @@
-.answer-modal {
+/* .answer-modal {
   position: fixed;
   bottom: 0;
   left: 0;
@@ -57,4 +57,61 @@
   to {
     transform: translateY(0);
   }
+} */
+
+.answer-modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 86%;
+  animation: slide-up 1s ease-in-out forwards;
+  z-index: 100;
+  margin-top: 5rem;
+}
+
+@keyframes slide-up {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.answer-content {
+  /* background-color: rgba(0, 0, 0, 0.7);  */
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 600px;
+  width: 80%;
+  height: 60%;
+  color: white; /* White text color */
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.answer-percentage {
+  font-size: 4rem; /* Large percentage text */
+  font-weight: bold;
+  margin: 0;
+}
+
+.answer-title {
+  font-size: 2rem; /* Title below percentage */
+  margin: 16px 0;
+  font-weight: normal;
+  color: white;
+}
+
+.answer-description {
+  font-size: 1.2rem; /* Description text */
+  margin: 20px 0;
 }

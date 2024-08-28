@@ -10,6 +10,7 @@ const questions = [
     correct: "Paris",
     bgImage: ageRange,
     highlights: ["capital", "France"],
+    answerText: "Females",
   },
   {
     question: "Who is the CEO of Techpoint?",
@@ -17,6 +18,7 @@ const questions = [
     correct: "Muyiwa",
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
+    answerText: "Females",
   },
   {
     question: "Who is Techpoint Digest author?",
@@ -24,6 +26,7 @@ const questions = [
     correct: "Victoria",
     bgImage: resign,
     highlights: ["author"],
+    answerText: "Females",
   },
   {
     question: "What year was Techpoint founded?",
@@ -31,6 +34,7 @@ const questions = [
     correct: "2015",
     bgImage: university,
     highlights: ["year", "founded"],
+    answerText: "Females",
   },
   {
     question: "What is the capital of Lagos?",
@@ -38,6 +42,7 @@ const questions = [
     correct: "Paris",
     bgImage: ageRange,
     highlights: "capital",
+    answerText: "Females",
   },
   {
     question: "Who is the CEO of PAtricia?",
@@ -45,6 +50,7 @@ const questions = [
     correct: "Muyiwa",
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
+    answerText: "Females",
   },
   {
     question: "Who is Modern workplace author?",
@@ -52,6 +58,7 @@ const questions = [
     correct: "Victoria",
     bgImage: resign,
     highlights: "author",
+    answerText: "Females",
   },
   {
     question: "What year was Patricia founded?",
@@ -59,13 +66,16 @@ const questions = [
     correct: "2015",
     bgImage: university,
     highlights: ["year", "founded"],
+    answerText: "Females",
   },
+
   {
     question: "What is the capital of Akwa-Ibom?",
     options: ["Berlin", "Madrid", "Paris"],
     correct: "Paris",
     bgImage: ageRange,
     highlights: "capital",
+    answerText: "Females",
   },
   {
     question: "Who is the CEO of Altschool?",
@@ -73,6 +83,7 @@ const questions = [
     correct: "Muyiwa",
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
+    answerText: "Females",
   },
   {
     question: "Who is Equity merchants author?",
@@ -80,6 +91,7 @@ const questions = [
     correct: "Victoria",
     bgImage: resign,
     highlights: "author",
+    answerText: "Females",
   },
   {
     question: "What year was The Front founded?",
@@ -87,6 +99,7 @@ const questions = [
     correct: "2015",
     bgImage: university,
     highlights: ["year", "founded"],
+    answerText: "Females",
   },
   {
     question: "What is the capital of Ogun?",
@@ -94,6 +107,7 @@ const questions = [
     correct: "Paris",
     bgImage: ageRange,
     highlights: "capital",
+    answerText: "Females",
   },
   {
     question: "Who is the CEO of UBA?",
@@ -101,6 +115,7 @@ const questions = [
     correct: "Muyiwa",
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
+    answerText: "Females",
   },
   {
     question: "Who is Americana's author?",
@@ -108,6 +123,7 @@ const questions = [
     correct: "Victoria",
     bgImage: resign,
     highlights: "author",
+    answerText: "Females",
   },
   {
     question: "What year was TalentQL founded?",
@@ -115,6 +131,7 @@ const questions = [
     correct: "2015",
     bgImage: university,
     highlights: ["year", "founded"],
+    answerText: "Females",
   },
   {
     question: "What year was BBNaija founded?",
@@ -122,6 +139,7 @@ const questions = [
     correct: "2015",
     bgImage: university,
     highlights: ["year", "founded"],
+    answerText: "Females",
   },
 ];
 
