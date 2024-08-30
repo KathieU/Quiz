@@ -11,6 +11,8 @@ const questions = [
     bgImage: ageRange,
     highlights: ["capital", "France"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is the CEO of Techpoint?",
@@ -19,6 +21,8 @@ const questions = [
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is Techpoint Digest author?",
@@ -27,6 +31,8 @@ const questions = [
     bgImage: resign,
     highlights: ["author"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What year was Techpoint founded?",
@@ -35,6 +41,8 @@ const questions = [
     bgImage: university,
     highlights: ["year", "founded"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What is the capital of Lagos?",
@@ -43,6 +51,8 @@ const questions = [
     bgImage: ageRange,
     highlights: "capital",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is the CEO of PAtricia?",
@@ -51,6 +61,8 @@ const questions = [
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is Modern workplace author?",
@@ -59,6 +71,8 @@ const questions = [
     bgImage: resign,
     highlights: "author",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What year was Patricia founded?",
@@ -67,6 +81,8 @@ const questions = [
     bgImage: university,
     highlights: ["year", "founded"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
 
   {
@@ -76,7 +92,10 @@ const questions = [
     bgImage: ageRange,
     highlights: "capital",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
+
   {
     question: "Who is the CEO of Altschool?",
     options: ["Chidinma", "Yinka", "Muyiwa"],
@@ -84,6 +103,8 @@ const questions = [
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is Equity merchants author?",
@@ -92,7 +113,10 @@ const questions = [
     bgImage: resign,
     highlights: "author",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
+
   {
     question: "What year was The Front founded?",
     options: ["2015", "2009", "2020"],
@@ -100,6 +124,8 @@ const questions = [
     bgImage: university,
     highlights: ["year", "founded"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What is the capital of Ogun?",
@@ -108,6 +134,8 @@ const questions = [
     bgImage: ageRange,
     highlights: "capital",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is the CEO of UBA?",
@@ -116,6 +144,8 @@ const questions = [
     bgImage: femaleWorkers,
     highlights: ["is", "CEO"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "Who is Americana's author?",
@@ -124,6 +154,8 @@ const questions = [
     bgImage: resign,
     highlights: "author",
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What year was TalentQL founded?",
@@ -132,6 +164,8 @@ const questions = [
     bgImage: university,
     highlights: ["year", "founded"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
   {
     question: "What year was BBNaija founded?",
@@ -140,6 +174,8 @@ const questions = [
     bgImage: university,
     highlights: ["year", "founded"],
     answerText: "Females",
+    bgColor: "red",
+    answerDescription: "Mary had a little lamb",
   },
 ];
 

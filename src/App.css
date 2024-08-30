@@ -15,6 +15,8 @@ body {
   position: relative;
   height: 100vh;
   overflow: hidden;
+  max-width: 1560px;
+  margin: 0 auto;
 }
 
 .content {

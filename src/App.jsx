@@ -104,7 +104,11 @@ function App() {
           onNext={handleNextQuestion}
           isLastQuestion={currentQuestionIndex === questionData.length - 1}
           bgImage={questionData[currentQuestionIndex]?.bgImage}
+          bgColor={questionData[currentQuestionIndex]?.bgColor}
           answerText={questionData[currentQuestionIndex]?.answerText}
+          answerDescription={
+            questionData[currentQuestionIndex]?.answerDescription
+          }
         />
       )}
     </div>
