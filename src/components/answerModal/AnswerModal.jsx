@@ -19,8 +19,10 @@ const AnswerModal = ({
         <div className="color-section">
           <div className="answer-content">
             <h3>{correctAnswer}</h3>
-            <p className="answer-text">{answerText}</p>
-            <p className="answer-description"> {answerDescription}</p>
+            <div className="answer-text-container">
+              <p className="answer-text">{answerText}</p>
+              <p className="answer-description"> {answerDescription}</p>
+            </div>
             <div className="general-button-container">
               <button className="general-button" onClick={onNext}>
                 {isLastQuestion ? "FINISH" : "CONTINUE YOUR QUEST"}
@@ -50,7 +52,7 @@ AnswerModal.propTypes = {
   onNext: PropTypes.func.isRequired,
   isLastQuestion: PropTypes.bool.isRequired,
   bgImage: PropTypes.string.isRequired,
-  answerText: PropTypes.string.isRequired,
+  answerText: PropTypes.string,
   answerDescription: PropTypes.string.isRequired,
 };
 

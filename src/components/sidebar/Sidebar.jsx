@@ -4,19 +4,36 @@ import "./Sidebar.css";
 const Sidebar = ({ currentPage }) => {
   return (
     <div className="sidebar">
-      <h2>Quiz Navigation</h2>
-      <ul>
-        <li className={currentPage === "front" ? "active" : ""}>Front Page</li>
-        {[...Array(5)].map((_, index) => (
-          <li
-            key={index}
-            className={currentPage === `question-${index}` ? "active" : ""}
-          >
-            Question {index + 1}
+      <div className="menu-button">Menu</div>
+      <div className="sidebar-content">
+        <ul className="sidebar-items">
+          <li className="sidebar-item">
+            <div
+              className={`bar ${currentPage === "front" ? "active" : ""}`}
+            ></div>
+            <span>Know your workplace 2024</span>
           </li>
-        ))}
-        <li className={currentPage === "result" ? "active" : ""}>Result</li>
-      </ul>
+          {[...Array(5)].map((_, index) => {
+            const questionId = `question-${index + 1}`;
+            return (
+              <li key={questionId} className="sidebar-item">
+                <div
+                  className={`bar ${
+                    currentPage === questionId ? "active" : ""
+                  }`}
+                ></div>
+                <span>Question {index + 1}</span>
+              </li>
+            );
+          })}
+          <li className="sidebar-item">
+            <div
+              className={`bar ${currentPage === "result" ? "active" : ""}`}
+            ></div>
+            <span>How did you do?</span>
+          </li>
+        </ul>
+      </div>
     </div>
   );
 };
