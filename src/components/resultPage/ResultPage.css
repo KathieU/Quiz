@@ -33,8 +33,21 @@
   background-color: white;
 }
 
-.result-content {
+.result-page-background {
+  background-image: url("../../assets/lastPage.png");
+  margin-top: 5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.result-content-container {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
 }
 
 @keyframes slideUp {
@@ -44,4 +57,101 @@
   to {
     transform: translateY(0);
   }
+}
+
+.result-content-container h2 {
+  color: #ff6b00;
+  text-align: center;
+  font-family: "Arimo";
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.result-content {
+  border-radius: 0.3125rem;
+  background: rgba(255, 247, 241, 0.95);
+  padding: 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.result-text {
+  color: #20474b;
+  text-align: center;
+  font-family: "Arimo";
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+.score-circle {
+  width: 11rem;
+  height: 11rem;
+  border: 5.3px solid #a74702;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.score {
+  color: #a74702;
+  text-align: center;
+  font-family: Arimo;
+  font-size: 6.2855rem;
+  font-style: normal;
+  font-weight: 700;
+  background-color: #fff7f1;
+  border-radius: 50%;
+  padding: 1rem;
+  width: 70%;
+  height: 70%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.share-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 1rem;
+}
+.share-container p {
+  color: #f79646;
+  font-family: Heebo;
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social-icons i {
+  font-size: 1.2rem;
+  color: #ff6b00;
+}
+
+.download-report {
+  padding: 0.625rem 1.3rem;
+  border: none;
+  cursor: pointer;
+  border-radius: 1.8125rem;
+  background: #f79646;
+  color: #f2feff;
+  font-family: "Aileron";
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 700;
+}
+
+.download-report:hover {
+  background-color: #a74702;
 }
