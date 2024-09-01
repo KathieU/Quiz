@@ -1,78 +1,53 @@
 .sidebar {
   position: fixed;
-  right: 20px;
-  top: 20px;
+  right: 0;
+  top: 0;
+  height: 100%;
   width: 200px;
-  height: calc(100vh - 40px);
+  padding: 10px;
+  background-color: transparent;
+  z-index: 1000;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: transparent;
-  z-index: 1000;
 }
 
 .menu-button {
-  background-color: white;
-  border: 2px solid black;
-  padding: 10px 20px;
-  border-radius: 8px;
-  text-align: center;
-  cursor: pointer;
   margin-bottom: 20px;
+  padding: 10px 15px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 12px;
+  cursor: pointer;
 }
 
-.sidebar-content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-}
-
-.sidebar-items {
-  list-style-type: none;
+.sidebar ul {
+  list-style: none;
   padding: 0;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
   width: 100%;
 }
 
-.sidebar-item {
+.sidebar li {
   display: flex;
   align-items: center;
-  margin-bottom: 20px;
-  position: relative;
-  width: 100%;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .bar {
-  width: 15px;
+  width: 10px;
   height: 40px;
-  background-color: #fff;
-  border-radius: 10px;
-  border: 2px solid black;
+  background-color: gray;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .bar.active {
   background-color: orange;
-  border-color: black;
 }
 
-.sidebar-item span {
-  font-size: 14px;
-  color: #fff;
-}
-
-.sidebar-item:first-child .bar {
-  background-color: #f8f9fa;
-}
-
-.sidebar-item.active .bar {
-  background-color: orange;
-}
-
-.sidebar-item:last-child .bar {
-  background-color: #f8f9fa;
+span.active-text {
+  color: #ff6b00;
+  font-weight: bold;
 }
