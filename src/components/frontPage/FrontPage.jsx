@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./FrontPage.css";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import frontBoy from "../../assets/frontBoy.png";
 
 function FrontPage() {
   const navigate = useNavigate();
@@ -15,6 +16,11 @@ function FrontPage() {
       <Header />
       <div className="front-page-container">
         <Sidebar currentPage="front" questions={[]} />
+        <img
+          className="front-page-boy"
+          src={frontBoy}
+          alt="Boy with magnifying glass"
+        />
 
         <div className="front-page-content">
           <h2>How Well Do You Know The Nigerian Workspace?</h2>

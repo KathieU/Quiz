@@ -46,3 +46,9 @@
   font-weight: 400 !important;
   margin-bottom: 5rem;
 }
+
+.front-page-boy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

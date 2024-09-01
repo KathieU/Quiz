@@ -76,7 +76,7 @@
   flex-grow: 1;
   overflow: hidden;
   white-space: nowrap;
-  text-overflow: ellipsis;
+  opacity: 0;
 }
 
 .menu-text {
@@ -113,3 +113,42 @@
   background-image: url("../../assets/columns.png");
   background-repeat: no-repeat;
 }
+
+/* Add this to your Sidebar.css */
+
+/* Hide the text when the front page is active */
+.front-text {
+  display: none;
+}
+
+/* .sidebar .bar-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .bar-wrapper .bar {
+  margin-right: 10px;
+} */
+
+/* Show the text when not on the front page */
+.sidebar .bar-wrapper:not(.front-page) .front-text {
+  display: block;
+}
+
+/* .menu-text {
+  color: #ababab;
+  text-align: center;
+  font-family: "Aileron";
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.active-menu-text {
+  color: #fff;
+}
+
+.active-text {
+  color: #fff;
+}
+
+ */
