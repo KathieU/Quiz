@@ -24,7 +24,7 @@
 
 .sidebar li {
   display: flex;
-  margin-bottom: 8px;
+  margin-bottom: 0.9rem;
   align-items: center;
   color: #f6f6f6;
   font-family: "Aileron";
@@ -39,6 +39,7 @@
   align-items: center;
   position: relative;
   z-index: 2;
+  width: 100%;
 }
 
 .bar {
@@ -46,7 +47,8 @@
   border: 3.58px solid #000;
   background: #f2feff;
   height: 1.3125rem;
-  width: 3.375rem;
+  flex-shrink: 0;
+  width: 3.375rem !important;
   margin-right: 10px;
   position: relative;
   z-index: 2;
@@ -56,28 +58,58 @@
   background-color: #ff6b00;
 }
 
-.front-bar {
-  border-color: #007bff;
-  background-color: #e0f7ff;
+.front-bar,
+.result-bar {
+  border-radius: 0.44756rem;
+  border: 3.58px solid #000;
+  background: #f2feff;
+  height: 3.375rem;
+  align-self: stretch;
+  flex-shrink: 0;
+  width: 3.375rem !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.result-bar {
-  border-color: #ff007b;
-  background-color: #ffe0e0;
+.front-text {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu-text {
+  color: #ababab;
+  text-align: center;
+  font-family: "Aileron";
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.active-menu-text {
+  color: #fff;
+  text-align: center;
+  font-family: "Aileron";
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.active-text {
+  color: #fff;
 }
 
 .question-page-background {
   position: absolute;
   top: calc(1.3125rem + 2.58px);
   bottom: calc(1.3125rem + 2.58px);
-  left: 1.75rem;
+  left: 2rem;
   right: 0;
   width: 100%;
   display: flex;
   justify-content: flex-start;
   align-items: flex-start;
   z-index: 0;
-  border: 2px solid red;
   background-image: url("../../assets/columns.png");
   background-repeat: no-repeat;
 }

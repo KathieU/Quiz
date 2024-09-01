@@ -22,13 +22,25 @@ const Sidebar = ({ currentPage }) => {
                 className={`bar ${currentPage === page.id ? "active" : ""} ${
                   page.id === "front" ? "front-bar" : ""
                 } ${page.id === "result" ? "result-bar" : ""}`}
-              ></div>
+              >
+                {page.id === "front" && (
+                  <span
+                    className={`menu-text ${
+                      currentPage === page.id ? "active-menu-text" : ""
+                    }`}
+                  >
+                    Menu
+                  </span>
+                )}
+              </div>
 
-              {currentPage !== "front" && (
-                <span className={currentPage === page.id ? "active-text" : ""}>
-                  {page.name}
-                </span>
-              )}
+              <span
+                className={`${currentPage !== "front" ? "" : "front-text"} ${
+                  currentPage === page.id ? "active-text" : ""
+                }`}
+              >
+                {page.name}
+              </span>
             </div>
           </li>
         ))}
