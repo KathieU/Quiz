@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./QuestionPage.css";
 import Header from "../header/Header";
 import Sidebar from "../sidebar/Sidebar";
+import questionBoy from "../../assets/questionBoy.png";
 
 const QuestionPage = ({
   questionData,
@@ -81,6 +82,11 @@ const QuestionPage = ({
         className="question-page active"
         style={{ backgroundImage: `url(${questionData.bgImage})` }}
       >
+        <img
+          className="question-page-boy"
+          src={questionBoy}
+          alt="Boy with magnifying glass"
+        />
         <Sidebar
           currentPage={`question-${questionNumber - 1}`}
           questions={[]}

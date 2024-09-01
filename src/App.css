@@ -8,6 +8,7 @@ body {
   padding: 0;
   overflow: hidden;
   height: 100%;
+  background-color: #fae3d3;
 }
 
 .app-container {

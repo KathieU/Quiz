@@ -14,19 +14,27 @@ const Sidebar = ({ currentPage }) => {
 
   return (
     <div className="sidebar">
-      <button className="menu-button">Menu</button>
       <ul>
         {pages.map((page, index) => (
           <li key={index}>
-            <div
-              className={`bar ${currentPage === page.id ? "active" : ""}`}
-            ></div>
-            <span className={currentPage === page.id ? "active-text" : ""}>
-              {page.name}
-            </span>
+            <div className="bar-wrapper">
+              <div
+                className={`bar ${currentPage === page.id ? "active" : ""} ${
+                  page.id === "front" ? "front-bar" : ""
+                } ${page.id === "result" ? "result-bar" : ""}`}
+              ></div>
+
+              {currentPage !== "front" && (
+                <span className={currentPage === page.id ? "active-text" : ""}>
+                  {page.name}
+                </span>
+              )}
+            </div>
           </li>
         ))}
       </ul>
+
+      <div className="question-page-background"></div>
     </div>
   );
 };
