@@ -43,11 +43,9 @@
   justify-content: center;
   align-items: center;
   z-index: 2;
-  border: 2px solid red;
 }
 
 .question-page-image-background {
-  border: 2px solid yellow;
   margin-top: 5rem;
   display: flex;
   flex-direction: column;
