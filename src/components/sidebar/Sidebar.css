@@ -1,6 +1,6 @@
 .sidebar {
   position: fixed;
-  right: 0;
+  right: 2.94rem;
   top: 7rem;
   width: 200px;
   padding: 10px;
@@ -24,7 +24,7 @@
 
 .sidebar li {
   display: flex;
-  margin-bottom: 0.9rem;
+  margin-bottom: 1.2rem;
   align-items: center;
   color: #f6f6f6;
   font-family: "Aileron";
@@ -46,9 +46,9 @@
   border-radius: 3.6875rem;
   border: 3.58px solid #000;
   background: #f2feff;
-  height: 1.3125rem;
+  height: 0.6rem;
   flex-shrink: 0;
-  width: 3.375rem !important;
+  width: 2.375rem !important;
   margin-right: 10px;
   position: relative;
   z-index: 2;
@@ -63,10 +63,10 @@
   border-radius: 0.44756rem;
   border: 3.58px solid #000;
   background: #f2feff;
-  height: 3.375rem;
+  height: 2.375rem;
   align-self: stretch;
   flex-shrink: 0;
-  width: 3.375rem !important;
+  width: 2.375rem !important;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -74,16 +74,14 @@
 
 .front-text {
   flex-grow: 1;
-  overflow: hidden;
-  white-space: nowrap;
-  opacity: 0;
+  display: none !important;
 }
 
 .menu-text {
   color: #ababab;
   text-align: center;
   font-family: "Aileron";
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
 }
 
@@ -91,7 +89,7 @@
   color: #fff;
   text-align: center;
   font-family: "Aileron";
-  font-size: 0.75rem;
+  font-size: 0.65rem;
   font-weight: 700;
 }
 
@@ -102,8 +100,8 @@
 .question-page-background {
   position: absolute;
   top: calc(1.3125rem + 2.58px);
-  bottom: calc(1.3125rem + 2.58px);
-  left: 2rem;
+  bottom: calc(1.3125rem + 1rem);
+  left: 1.5rem;
   right: 0;
   width: 100%;
   display: flex;
@@ -114,41 +112,6 @@
   background-repeat: no-repeat;
 }
 
-/* Add this to your Sidebar.css */
-
-/* Hide the text when the front page is active */
 .front-text {
   display: none;
 }
-
-/* .sidebar .bar-wrapper {
-  display: flex;
-  align-items: center;
-}
-
-.sidebar .bar-wrapper .bar {
-  margin-right: 10px;
-} */
-
-/* Show the text when not on the front page */
-.sidebar .bar-wrapper:not(.front-page) .front-text {
-  display: block;
-}
-
-/* .menu-text {
-  color: #ababab;
-  text-align: center;
-  font-family: "Aileron";
-  font-size: 0.75rem;
-  font-weight: 700;
-}
-
-.active-menu-text {
-  color: #fff;
-}
-
-.active-text {
-  color: #fff;
-}
-
- */

@@ -1,23 +1,21 @@
 .front-page {
   display: flex;
-  /* height: 100vh; */
   position: relative;
   background: #fae3d3;
-  /* padding-left: 2.88rem;
-  padding-right: 2.94rem; */
-  /* max-width: 1440px;
-  margin: 0 auto; */
+  margin: 0 auto;
 }
 
 .front-page .front-page-container {
   background-image: url("../../assets/landing.png");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 4.44rem;
+  margin-left: 2.88rem;
+  margin-right: 2.94rem;
 }
 
 .front-page-content {

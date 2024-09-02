@@ -42,12 +42,24 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  z-index: 2;
+  border: 2px solid red;
+}
+
+.question-page-image-background {
+  border: 2px solid yellow;
+  margin-top: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   z-index: 2;
+  height: 90%;
+  width: 93%;
 }
-
 .question-page.active {
   animation: slideUp 1s ease-in-out forwards;
 }
@@ -69,7 +81,7 @@
   color: #f2feff;
   text-align: center;
   font-family: "Arimo";
-  font-size: 2.5rem;
+  font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0;
   width: 65%;
@@ -79,7 +91,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 5rem;
 }
 
 .options-container {
@@ -88,12 +99,11 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 15px;
-  width: 14.75rem;
-  height: 11.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  gap: 2px;
+  width: 16rem;
   border-radius: 10px;
-  margin-bottom: 3rem;
-  margin-top: 2.69rem;
   background: rgba(255, 247, 241, 0.95);
 }
 

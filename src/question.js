@@ -93,7 +93,7 @@ const questions = [
   {
     question:
       "What's the largest share of people's salary do you think they spend on transportation in a month?",
-    options: ["20-329%", "30-40%", "45-50%"],
+    options: ["20-29%", "30-40%", "45-50%"],
     correct: "45-50%",
     bgImage: resign,
     highlights: "author",
