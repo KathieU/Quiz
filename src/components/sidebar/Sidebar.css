@@ -115,3 +115,39 @@
 .front-text {
   display: none;
 }
+
+.sidebar.front {
+  top: 7rem;
+  right: -5rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.sidebar.result {
+  top: 60%;
+  right: 2.94rem;
+  transform: translateY(-50%);
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.sidebar li {
+  display: flex;
+  margin-bottom: 1.2rem;
+  align-items: center;
+  color: #f6f6f6;
+  font-family: "Aileron";
+  font-size: 0.875rem;
+  font-weight: 700;
+  position: relative;
+  z-index: 2;
+}
+
+/* Other existing styles remain unchanged */

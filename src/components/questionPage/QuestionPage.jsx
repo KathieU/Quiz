@@ -49,7 +49,9 @@ const QuestionPage = ({
         <div className="question-page previous">
           <div
             className="question-page-image-background"
-            style={{ backgroundImage: `url(${previousQuestionData.bgImage})` }}
+            style={{
+              backgroundImage: `linear-gradient(rgba(35, 33, 32, 0.83), rgba(35, 33, 32, 0.83)),url(${previousQuestionData.bgImage})`,
+            }}
           >
             <Sidebar
               currentPage={`question-${questionNumber - 2}`}
@@ -127,7 +129,9 @@ const QuestionPage = ({
       <div key={animationKey} className="question-page active">
         <div
           className="question-page-image-background"
-          style={{ backgroundImage: `url(${questionData.bgImage})` }}
+          style={{
+            backgroundImage: `linear-gradient(rgba(35, 33, 32, 0.83), rgba(35, 33, 32, 0.83)), url(${questionData.bgImage})`,
+          }}
         >
           <img
             className="question-page-boy"

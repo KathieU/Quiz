@@ -76,7 +76,7 @@ const ResultPage = ({
         <div
           className="question-page-image-background"
           style={{
-            backgroundImage: `url(${previousQuestionData.bgImage})`,
+            backgroundImage: `linear-gradient(rgba(35, 33, 32, 0.83), rgba(35, 33, 32, 0.83)),url(${previousQuestionData.bgImage})`,
           }}
         >
           <Sidebar currentPage="result" questions={[]} />
@@ -145,6 +145,7 @@ const ResultPage = ({
         <Header />
         <div className="result-page-background">
           <Sidebar currentPage="result" questions={[]} />
+
           <div className="result-content-container">
             <h2>Quest Result</h2>
             <div className="result-content">

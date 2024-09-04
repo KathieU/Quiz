@@ -14,7 +14,9 @@ const AnswerModal = ({
       <div className="answer-content-container">
         <div
           className="image-section"
-          style={{ backgroundImage: `url(${bgImage})` }}
+          style={{
+            backgroundImage: `linear-gradient(rgba(35, 33, 32, 0.4), rgba(35, 33, 32, 0.83)),url(${bgImage})`,
+          }}
         ></div>
         <div className="color-section">
           <div className="answer-content">
