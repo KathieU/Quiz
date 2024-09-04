@@ -2,7 +2,6 @@
   position: fixed;
   right: 2.94rem;
   top: 7rem;
-  width: 200px;
   padding: 10px;
   height: fit-content;
   background-color: transparent;
@@ -33,7 +32,6 @@
   position: relative;
   z-index: 2;
 }
-
 .bar-wrapper {
   display: flex;
   align-items: center;
@@ -72,31 +70,6 @@
   align-items: center;
 }
 
-.front-text {
-  flex-grow: 1;
-  display: none !important;
-}
-
-.menu-text {
-  color: #ababab;
-  text-align: center;
-  font-family: "Aileron";
-  font-size: 0.65rem;
-  font-weight: 700;
-}
-
-.active-menu-text {
-  color: #fff;
-  text-align: center;
-  font-family: "Aileron";
-  font-size: 0.65rem;
-  font-weight: 700;
-}
-
-.active-text {
-  color: #fff;
-}
-
 .question-page-background {
   position: absolute;
   top: calc(1.3125rem + 2.58px);
@@ -112,42 +85,15 @@
   background-repeat: no-repeat;
 }
 
-.front-text {
-  display: none;
-}
-
-.sidebar.front {
-  top: 7rem;
-  right: -5rem;
-  display: flex;
-  flex-direction: row-reverse;
-}
-
 .sidebar.result {
   top: 60%;
   right: 2.94rem;
   transform: translateY(-50%);
 }
-
-.sidebar ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  width: 100%;
-  position: relative;
-  z-index: 1;
-}
-
-.sidebar li {
-  display: flex;
-  margin-bottom: 1.2rem;
-  align-items: center;
-  color: #f6f6f6;
+.menu-text {
+  color: #fff;
+  text-align: center;
   font-family: "Aileron";
-  font-size: 0.875rem;
+  font-size: 0.65rem;
   font-weight: 700;
-  position: relative;
-  z-index: 2;
 }
-
-/* Other existing styles remain unchanged */

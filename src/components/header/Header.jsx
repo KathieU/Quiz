@@ -1,4 +1,6 @@
 import "./Header.css";
+import downloadIcon from "../../assets/icons/downloadIcon.png";
+import infoIcon from "../../assets/icons/infoIcon.png";
 
 const Header = () => {
   return (
@@ -8,11 +10,15 @@ const Header = () => {
       </h1>
       <div className="header-buttons-container">
         <a className="more-info-button">
-          <button>More info</button>
+          <button>
+            More info <img src={infoIcon} alt="Info Icon" />
+          </button>
         </a>
 
         <a className="download-report-button">
-          <button>Download report</button>
+          <button>
+            Download report <img src={downloadIcon} alt="Download Icon" />
+          </button>
         </a>
       </div>
     </div>

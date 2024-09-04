@@ -82,7 +82,7 @@
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0;
-  width: 65%;
+  width: 80%;
 }
 
 .question-content {
@@ -138,10 +138,18 @@
   box-shadow: 0px 4px 4px 0px rgba(167, 71, 2, 0.05);
 }
 
+.option:hover {
+  background: #fbebe0;
+}
+
 .selected {
   background-color: #20474b;
   color: #dfd4c5;
   border: none;
+}
+
+.selected:hover {
+  background-color: #20474b;
 }
 
 .selected-check {

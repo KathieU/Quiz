@@ -98,3 +98,19 @@ body {
   border: 2.139px solid #f2feff;
   border-radius: 100%;
 }
+
+.general-button:hover {
+  background-color: #ff6b00;
+  color: #f2feff;
+}
+.general-button:hover path {
+  fill: #f2feff;
+}
+.general-button:disabled {
+  background-color: #dfd4c5;
+  color: #a74702;
+}
+
+.general-button:disabled path {
+  fill: #a74702;
+}
